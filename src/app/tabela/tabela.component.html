@@ -1,0 +1,19 @@
+<div class="container mt-5">
+ 
+    <table class="table table-bordered table-hover table-responsive border-warning">
+    <thead class=" text-dark">
+        <tr>
+        <th scope="col" class="bg-warning">Id</th>
+        <th scope="col" class="bg-warning">Título</th>
+        <th scope="col" class="bg-warning">Conteúdo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of infos">
+        <td >{{i.id}}</td>
+        <td>{{ i.title | slice:0:30 }}{{ i.title.length > 30 ? '...' : '' }}</td>
+        <td>{{ i.body | slice:0:30 }}{{ i.title.length > 30 ? '...' : '' }}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
